@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import basic
+
 from sqlalchemy import Table, Column, Integer, String, Boolean
 from sqlalchemy import DateTime, Interval
 from sqlalchemy import ForeignKey
@@ -13,12 +15,7 @@ class Swim(Base):
     swim_type = Colum(Integer, nullable=False)
     distance = Column(Integer)
     bodydatas = relationship("BodyData")
-    set_id = Column(Integer, ForeignKey(Set.id))
+    set_id = Column(Integer, ForeignKey(basic.Set.id))
+    comments_id = Column(Integer, ForeignKey(basic.Comment.id))
 
-class BodyData(Base):
-    __tablename__ = "body_data"
-    id = Column(Integer, primary_key=True)
-    effort = Column(Integer)
-    pulsation = Column(Integer)
-    blood_pressure = Column(String)
 

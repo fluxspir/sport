@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+from sqlalchemy import Table, Column, Integer
+from sqlalchemy import DateTime, Interval
+from sqlalchemy import ForeignKey
+from sqlalchemy.ext.declarative import declarative_base
+
+
 class Session(Base):
     __tablename__ = "session"
     id = Column(Integer, primary_key=True)
@@ -13,5 +19,4 @@ class Set(Base):
     duration = Column(Interval)
     sequence = Column(Integer)
     session_id = Column(Integer, ForeignKey(Session.id))
-
 
