@@ -6,6 +6,7 @@ import models
 
 try:
     models.init()
+    meta.Base.metadata.create_all(bind=meta.session.bind.engine)
     sys.exit(0)
 
 except KeyboardInterrupt:
