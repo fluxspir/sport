@@ -10,9 +10,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from zope.sqlalchemy import ZopeTransactionExtension
 
-from basic import Session, Set
+from basic import Comment, Session, Set
 from swim import Swim
 from run import Run
+from bodydata import BodyData
 
 def init():
     parser = ConfigParser.ConfigParser()
