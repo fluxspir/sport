@@ -12,8 +12,8 @@ from zope.sqlalchemy import ZopeTransactionExtension
 
 from basic import Comment, Session, Set
 from swim import Swim
-from run import Run
-from bodydata import BodyData
+#from run import Run
+from bodydata import Cardio
 
 def init():
     parser = ConfigParser.ConfigParser()

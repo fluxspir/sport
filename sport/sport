@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+
+try:
+    models.init()
+    sys.exit(0)
+
+except KeyboardInterrupt:
+    sys.exit(1)
