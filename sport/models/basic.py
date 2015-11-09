@@ -2,10 +2,12 @@
 
 import datetime
 
+from meta import Base
+
 from sqlalchemy import Table, Column, Integer, String
 from sqlalchemy import DateTime, Interval
 from sqlalchemy import ForeignKey
-from sqlalchemy import relationship, backref
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy.ext.declarative import declarative_base
 
 class Comment(Base):

@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
+#
 
+from meta import Base
 import basic
 
 from sqlalchemy import Table, Column, Integer
 from sqlalchemy import DateTime, Interval
 from sqlalchemy import ForeignKey
-from sqlalchemy import relationship
+from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 
