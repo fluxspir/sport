@@ -3,7 +3,7 @@
 
 import sys
 import models
-
+from models import meta
 try:
     models.init()
     meta.Base.metadata.create_all(bind=meta.session.bind.engine)

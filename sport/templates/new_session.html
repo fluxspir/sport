@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+{% block pagetitle %}
+Adding new session
+{% endblock %}
+{% block main %}
+{% from "_formhelpers.html" import render_field, render_simple_field %}
+<form method="post" action="{{ url_for('new_session_add') }}">
+  <dl>
+    {{ render_field(form.place_id) }}
+    <a href={{ url_for('new_place_add') }}>Add a new place</a>
+    {{ render_field(form.start) }}
+  </dl>
+  <dl>
+    {{ render_field(form.duration) }} {{ render_field(form.duration_unit) }}
+  </dl>
+  <dl>
+    {{ render_field(form.comment) }}
+  </dl>
+  <p><input type="submit" value="Add">
+</form>
+{% endblock %}

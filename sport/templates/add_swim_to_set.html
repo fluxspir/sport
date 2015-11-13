@@ -1,0 +1,32 @@
+{% extends "header.html" %}
+{% block pagetitle %}
+Adding swim to set {{ session.set_id }}
+{% endblock %}
+{% block main %}
+{% from "_formhelpers.html" import render_field, render_simple_field %}
+<form method="post" action="{{ url_for('add_swim_to_set') }}">
+  <dl>
+    {{ render_field(form.swim_id) }}
+    <a href={{ url_for('new_swim_add') }}>Add a new swim type</a>
+    {{ render_field(form.distance) }}
+    {{ render_field(form.start) }}
+  </dl>
+  <dl>
+    {{ render_field(form.duration) }} {{ render_field(form.duration_unit) }}
+  </dl>
+  <dl>
+    {{ render_field(form.comment_swim) }}
+  </dl>
+  <br />
+  Body's datas :
+  <dl>
+    {{ render_field(form.effort) }}
+    {{ render_field(form.pulsation) }}
+    {{ render_field(form.blood_pressure_systole) }}
+    {{ render_field(form.blood_pressure_diastole) }}
+    {{ render_field(form.comment_cardio) }}
+  </dl>
+
+  <p><input type="submit" value="Add">
+</form>
+{% endblock %}

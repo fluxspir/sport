@@ -26,8 +26,6 @@ class SwimData(Base):
     start = Column(DateTime)
     duration = Column(Interval)
     distance = Column(Float)
-    place_id = Column(Integer, ForeignKey(basic.Place.id), nullable=False)
-    place = relationship("Place")
     bodydata_id = Column(Integer, ForeignKey(bodydata.Cardio.id))
     bodydatas = relationship("Cardio")
     set_id = Column(Integer, ForeignKey(basic.Set.id))

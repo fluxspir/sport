@@ -26,4 +26,4 @@ bp = Blueprint('frontend', __name__, url_prefix='/<lang_code>')
 
 models.init()
 
-import sport.views
+import views

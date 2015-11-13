@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+      {% block base %}
+      	<!--base href="/static/"-->
+      {% endblock %}
+      {% block meta %}
+      	<meta name="description" content="Sport">
+      	<meta name="keywords" content="sport ">
+      	<meta name="author" content="Franck LABADILLE">
+      	<meta charset="UTF-8">
+      {% endblock %}
+      {% block css %} 
+      	<link rel="stylesheet" type="text/css" href="/static/style.css">
+      	<link rel="stylesheet" type="text/css" href="/static/header.css">
+      	<link rel="stylesheet" type="text/css" href="/static/main.css">
+      	<link rel="stylesheet" type="text/css" href="/static/footer.css">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+      {% endblock %}
+      {% block css_sum %}
+      {% endblock %}
+      <script type="text/javascript" src="/static/js/brothel.js"></script>
+      {% block javascript_specific %}
+      {% endblock %}
+      	<title>{% block title %}Sport{% endblock %}</title>
+    {% endblock %}
+  </head>
+
+
+  <body>
+    <header>
+      {% block mainsummary%}
+      {% endblock %}
+    </header>
+    
+    <div id="main_container">
+      <section id="main">
+      {% block main %}
+      {% endblock %}
+      </section>
+    </div>
+
+
+    <footer>
+      {% block footer %}
+      &copy; Copyright 2015 by <a class="footer" href="mailto:franck@kernlog.net">Franck Labadille</a>.
+      BTC : 12X27E9ZeApwLrbEphnQNgPM9DvRRKiUYq
+      {% endblock %}
+    </footer>
+  </body>
+</html>

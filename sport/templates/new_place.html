@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+{% block pagetitle %}
+Adding a new place
+{% endblock %}
+{% block main %}
+{% from '_formhelpers.html' import render_field %}
+<form method="post" action="{{ url_for('new_place_add') }}">
+  <dl>
+    {{ render_field(form.place) }}
+    {{ render_field(form.comment)}}
+  </dl>
+  <p><input type="submit" value="Add">
+</form>
+{% endblock %}

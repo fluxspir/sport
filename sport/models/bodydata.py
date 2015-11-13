@@ -17,6 +17,7 @@ class Cardio(Base):
     id = Column(Integer, primary_key=True)
     effort = Column(Integer)
     pulsation = Column(Integer)
-    blood_pressure = Column(Integer)
+    blood_pressure_systole = Column(Integer)
+    blood_pressure_diastole = Column(Integer)
     comment_id = Column(Integer, ForeignKey(basic.Comment.id))
     comment = relationship("Comment")

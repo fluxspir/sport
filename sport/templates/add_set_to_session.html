@@ -1,0 +1,19 @@
+{% extends "header.html" %}
+{% block pagetitle %}
+Adding a new set to session {{ session.session_id }} 
+{% endblock %}
+{% block main %}
+{% from '_formhelpers.html' import render_field %}
+<form method="post" action="{{ url_for('add_set_to_session') }}">
+  <a href={{ url_for('quit_adding_set_to_session') }}>Quit adding sets to session</a>
+  <dl>
+    {{ render_field(form.sport_type) }}
+    {{ render_field(form.sequence) }}
+    {{ render_field(form.start) }}
+    {{ render_field(form.duration) }}
+    {{ render_field(form.duration_unit) }}
+    {{ render_field(form.comment) }}
+  </dl>
+  <p><input type="submit" value="Add">
+</form>
+{% endblock %}
