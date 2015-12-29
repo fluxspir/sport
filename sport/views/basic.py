@@ -261,7 +261,7 @@ def add_swim_to_set():
                             }
         comment_swim_id = add_new_comment(form.comment_swim)
         if comment_swim_id:
-            swimdatas_args['comment'] = comment_swim_id
+            swimdatas_args['comments_id'] = comment_swim_id
         if form.start.data:
             swimdatas_args['start'] = form.start.data
         if form.duration.data:
